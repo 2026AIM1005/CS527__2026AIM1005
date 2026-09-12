@@ -1,0 +1,32 @@
+% Lab 4 test case: Sum of two arrays using vector instructions.
+% Data layout:
+%   address 0       : N
+%   address 4       : Array A, N integers
+%   address 4+4*N   : Array B, N integers
+%   address 4+8*N   : Result, N integers
+% N is a multiple of 8.
+
+x1 = [0]          % N
+x2 = x1 * 4       % N * 4
+x3 = 4             % address of A
+x4 = x3 + x2       % address of B
+x7 = x2 + x2       % 2*N*4
+x7 = x7 + 4        % address of result
+x5 = 0             % index
+
+.loop
+x6 = x5 - x1       % finished when index == N
+BEQ .finish
+
+v0 = [x3]          % load 8 values from A
+v1 = [x4]          % load 8 values from B
+v2 = v0 + v1       % vector addition
+[x7] = v2          % store 8 results
+
+x3 = x3 + 32       % next 8 A elements
+x4 = x4 + 32       % next 8 B elements
+x7 = x7 + 32       % next 8 result elements
+x5 = x5 + 8        % index += 8
+BAL .loop
+
+.finish
