@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/CS527/CS527_Pipelined_Processor_2026AIM1005/CS527_Pipelined_Processor_2026AIM1005",
-      "program": "d:/CS527/CS527_Pipelined_Processor_2026AIM1005/CS527_Pipelined_Processor_2026AIM1005/build/Debug/outDebug",
+      "cwd": "d:/CS527/CS527_Pipelined_Processor",
+      "program": "d:/CS527/CS527_Pipelined_Processor/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

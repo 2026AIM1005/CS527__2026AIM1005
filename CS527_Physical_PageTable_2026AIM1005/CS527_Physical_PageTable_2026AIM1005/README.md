@@ -258,3 +258,42 @@ physical memory
 ```
 
 Thus the MMU page table is physically resident in the same physical memory abstraction used by the simulator, while frame 0 remains reserved and unavailable to program/data pages.
+
+Running Command For Windows:
+dir 
+gcc -Wall -Wextra -std=c11 -o executable.exe main.c compiler.c processor.c memory.c os.c
+dir executable.exe 
+.\executable.exe  
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+exit
+Remove-Item *.log 
+Remove-Item *.byte
+
+Running command for linux:
+cd CS527_Q3_Physical_PageTable_2026AIM1005
+ls
+gcc -Wall -Wextra -std=c11 -o executable main.c compiler.c processor.c memory.c os.c
+ls -l executable
+./executable
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+exit
+
+cd ~/Downloads
+unzip CS527_Q7_Pipelined_Processor_2026AIM1005_PID1to4.zip
+
+cd CS527_Q7_Pipelined_Processor_2026AIM1005
+ls
+gcc -Wall -Wextra -std=c11 -o executable main.c compiler.c processor.c memory.c os.c
+ls -l executable
+./executable
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+programs/mapping_test.txt tests/data_small.byte
+exit
